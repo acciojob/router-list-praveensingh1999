@@ -2,10 +2,11 @@ import React from 'react';
 import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
-import { Route, Routes, Link, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 const App = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Show the list only on the main page
   const showList = location.pathname === '/';
@@ -16,9 +17,9 @@ const App = () => {
         <>
           <h1>List Items</h1>
           <ul>
-            <li><Link to='/items/1'>Item 1</Link></li>
-            <li><Link to='/items/2'>Item 2</Link></li>
-            <li><Link to='/items/3'>Item 3</Link></li>
+            <li><button onClick={() => navigate('/items/1')}>Item 1</button></li>
+            <li><button onClick={() => navigate('/items/2')}>Item 2</button></li>
+            <li><button onClick={() => navigate('/items/3')}>Item 3</button></li>
           </ul>
         </>
       )}
