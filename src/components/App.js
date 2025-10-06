@@ -1,8 +1,8 @@
 
 import React from "react";
-import page1 from './page1'
-import page2 from './page2'
-import page3 from './page3'
+import Page1 from './Page1'
+import Page2 from './Page2'
+import Page3 from './Page3'
 import { Route,Routes } from 'react-router-dom'
 import './../styles/App.css';
 import { Link } from 'react-router-dom'
@@ -21,9 +21,9 @@ const App = () => {
     
 
     <Routes>
-        <Route path='/items/:1' element={<page1/>}/>
-         <Route path='/items/:2' element={<page2/>}/>
-         <Route path='/items/:3' element={<page3/>}/>
+        <Route path='/items/:1' element={<Page1/>}/>
+         <Route path='/items/:2' element={<Page2/>}/>
+         <Route path='/items/:3' element={<Page3/>}/>
          
          <Route path='*' element={<Error/>}></Route>
        </Routes> 
